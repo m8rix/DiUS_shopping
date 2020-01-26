@@ -64,21 +64,27 @@ end
 
 module UnitTesting
   class ItemTest < Test::Unit::TestCase
-    def test_attributes_are_accessible
-    	mbp = Item.new(sku: :mbp, name: "MacBook Pro", price: 1399.99)
+    def setup
+      @item = Item.new(sku: :mbp, name: "MacBook Pro", price: 1399.99)
+    end
 
+    def test_sku_attribute_is_accessible
       assert(
-        mbp.sku == :mbp,
+        @item.sku == :mbp,
         "Stock Keeping Unit accessible"
       )
+    end
 
+    def test_name_attribute_is_accessible
       assert(
-        mbp.name == "MacBook Pro",
+        @item.name == "MacBook Pro",
         "Name accessible"
       )
+    end
 
+    def test_price_attribute_is_accessible
       assert(
-        mbp.price == 1399.99,
+        @item.price == 1399.99,
         "Price accessible"
       )
     end
