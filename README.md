@@ -11,7 +11,8 @@ https://github.com/DiUS/coding-tests/blob/master/dius_shopping.md#example-scenar
    - Simplified interfaces: Rules, and Items are passed in, these will need to be intuitive in order for someone to interact easily
 
 ### Setup
-Check your ruby version (I am using ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-darwin18])
+Check your ruby version (I am using ruby 2.6.3)
+Some methods used are not supported in earlier versions of Ruby
 ```shell
 $ ruby -v
 ```
@@ -23,7 +24,8 @@ git clone https://github.com/m8rix/dius_shopping.git ~/m8rix_shopping
 
 Run tests
 ```shell
-ruby ~/m8rix_shopping/tests.rb
+cd ~/m8rix_shopping
+ruby tests.rb
 ```
 
 Interact (via irb)
